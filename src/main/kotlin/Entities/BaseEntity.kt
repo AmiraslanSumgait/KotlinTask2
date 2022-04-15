@@ -1,9 +1,5 @@
 package Entities
 
-abstract class BaseEntity {
-
-    var id: Int=0;
-    constructor(){
-        ++id
-    }
-}
+ companion object{
+     var id:Int=1
+ }
