@@ -4,8 +4,7 @@ import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
-class Project {
-    var name: String
+  var name: String
     var projectId: Int
     var categoryId:Int
     var userId:Int
@@ -19,16 +18,13 @@ class Project {
         this.userId=userId
     }
     fun StartTimer() {
-       var projectStartTime= LocalDateTime.now()
+       this.projectStartTime= LocalDateTime.now()
     }
     fun EndTimer() {
-        var projectEndTime= LocalDateTime.now()
+        this.projectEndTime= LocalDateTime.now()
     }
 
-
-    }
     fun projectTimeDifferenceWithSeconds():Int{
-        var differenceTime =projectEndTime?.toSecondOfDay()!! - projectStartTime?.toSecondOfDay()!!
+        var differenceTime =this.projectEndTime?.toSecondOfDay()!! - this.projectStartTime?.toSecondOfDay()!!
         return  differenceTime;
     }
-}
